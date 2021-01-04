@@ -5,7 +5,7 @@ namespace core
 {
     public class NoTestDataFoundException : Exception
     {
-        private Logger logger = LogManager.GetCurrentClassLogger();
+        private readonly Logger logger = LogManager.GetCurrentClassLogger();
 
         public NoTestDataFoundException(string message)
         {
