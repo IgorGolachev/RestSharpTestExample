@@ -1,7 +1,7 @@
 ﻿using Newtonsoft.Json;
 using FluentAssertions;
 
-namespace core
+namespace core.Util
 {
     public sealed class AssertionHelper
     {

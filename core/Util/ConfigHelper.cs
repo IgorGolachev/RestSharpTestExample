@@ -1,6 +1,6 @@
 ﻿using System.Configuration;
 
-namespace core
+namespace core.Util
 {
     public sealed class ConfigHelper
     {

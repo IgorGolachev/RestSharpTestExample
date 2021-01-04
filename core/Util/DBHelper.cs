@@ -5,7 +5,7 @@ using System.Collections.Generic;
 using SimpleImpersonation;
 using NLog;
 
-namespace core
+namespace core.Util
 {
     public sealed class DBHelper
     {
