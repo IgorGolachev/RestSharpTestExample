@@ -9,8 +9,6 @@ namespace core.Util
 {
     public sealed class DBHelper
     {
-        private Logger logger = LogManager.GetCurrentClassLogger();
-
         private static string username = ConfigHelper.DBUserName;
         private static string password = ConfigHelper.DBUserPassword;
 
@@ -82,7 +80,7 @@ namespace core.Util
                 }
                 catch (SqlException e)
                 {
-                    logger.Info(e.Message);
+                    Logger.Log.Info(e.Message);
                 }
                 return dt;
             });

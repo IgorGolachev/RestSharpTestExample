@@ -9,7 +9,6 @@ namespace core.Util
 {
     public sealed class FileHelper
     {
-        private Logger logger = LogManager.GetCurrentClassLogger();
         public string ReadJsonStringFromFile(string filePath)
         {
             try
@@ -18,7 +17,7 @@ namespace core.Util
             }
             catch (FileNotFoundException e)
             {
-                logger.Info(e.Message);
+                Logger.Log.Info(e.Message);
                 return string.Empty;
             }
         }
