@@ -9,9 +9,7 @@ namespace core.Util
         {
             var type = typeof(T);
             if (!typeof(T).IsEnum)
-            {
                 throw new ArgumentException("T must be an enumerated type");
-            }
 
             foreach (var field in type.GetFields())
             {
@@ -35,9 +33,7 @@ namespace core.Util
             where T : struct, IConvertible
         {
             if (!typeof(T).IsEnum)
-            {
                 throw new ArgumentException("T must be an enumerated type");
-            }
 
             DescriptionAttribute[] attributes = (DescriptionAttribute[])item
                .GetType()
