@@ -9,8 +9,11 @@ using core.Common.Feature;
 using NUnit.Framework;
 using core.Common.Request.Transfer;
 
+[assembly:LevelOfParallelism(3)]
+
 namespace core
 {
+    
     [TestFixture]
     [Parallelizable(ParallelScope.All)]
     public sealed class TestExample
