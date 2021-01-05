@@ -6,6 +6,10 @@ on:
   pull_request:
     branches: [ main ]
 
+defaults:
+  run:
+    working-directory: core
+
 jobs:
   build:
 
@@ -19,9 +23,7 @@ jobs:
         dotnet-version: 3.1.301
     - name: Restore dependencies
       run: dotnet restore
-        working-directory: core
     - name: Build
       run: dotnet build --no-restore
-        working-directory: core
     - name: Test
       run: dotnet test --no-build --verbosity normal
